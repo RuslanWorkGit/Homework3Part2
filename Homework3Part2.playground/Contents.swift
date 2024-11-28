@@ -249,11 +249,11 @@ class Screen {
         
         for index in 0 ..< resultProducts.count {
             let product = cart.products[index]
-            let productprice = product.price / selectedCurrencyValue
+            let productPrice = product.price / selectedCurrencyValue
             
             resultStringToPrint += "\n\(index + 1) "
             resultStringToPrint += "Назва продукту: \(product.name), "
-            resultStringToPrint += "Ціна: \(currency.rawValue) \(String(format: "%.2f", product.price))"
+            resultStringToPrint += "Ціна: \(currency.rawValue) \(String(format: "%.2f", productPrice))"
         }
         
         resultStringToPrint += "\n---------------------------------------------------------------------"
@@ -413,7 +413,6 @@ screen.printCheck(cart: cart)
 
 // Початок коду сценарію для Пункт 3
 
-/*
 
 print("\nSCENARIO 3:\n")
 
@@ -427,7 +426,6 @@ screen.printCart(cart: cart, currency: .usd)
 // Користувач натискає кнопку зміни валюти на EUR
 screen.printCart(cart: cart, currency: .eur)
 
- */
  
 // Кінець коду сценарію для Пункт 3
 
